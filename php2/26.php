@@ -7,7 +7,7 @@
 </head>
 <body>
   <?php
-  echo htmlspecialchars($_COOKIE["ciastko"]);
+  echo $_COOKIE["ciastko"];
   ?>
 </body>
 </html>
