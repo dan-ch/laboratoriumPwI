@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="number" id="a">
+  <input type="number" id="b">
+  <button>Licz</button><br>
+  <output name="suma" class="suma"></output><br>
+  <output name="roznica" class="roznica"></output><br>
+  <output name="iloczyn" class="iloczyn"></output><br>
+  <output name="iloraz" class="iloraz"></output>
+
+  <script>
+    const a = document.getElementById("a");
+    const b = document.getElementById("b");
+    const suma = document.querySelector(".suma");
+    const roznica = document.querySelector(".roznica");
+    const iloczyn = document.querySelector(".iloczyn");
+    const iloraz = document.querySelector(".iloraz");
+    const btn = document.querySelector("button");
+
+    const kalkulator = function () {
+      if (a.textContent != null && b.textContent != null) {
+        const liczba1 = parseInt(a.value);
+        const liczba2 = parseInt(b.value);
+        suma.textContent = `Suma:  ${liczba1 + liczba2}`;
+        roznica.textContent = `Roznica:  ${liczba1 - liczba2}`;
+        iloczyn.textContent = `Iloczyn:  ${liczba1 * liczba2}`;
+        if (liczba2 != 0) iloraz.textContent = `Iloczyn:  ${liczba1 / liczba2}`;
+        else iloraz.textContent = "Dzielenie przez zero";
+      }
+    }
+
+
+    btn.addEventListener("click", kalkulator);
+  </script>
+</body>
+
+</html>
